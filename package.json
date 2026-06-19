@@ -1,0 +1,20 @@
+{
+  "name": "@astro-starlight-template/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@nx/js": "23.1.0",
+    "@nx/workspace": "23.1.0",
+    "@types/node": "^24.0.0",
+    "nx": "23.1.0",
+    "typescript": "~6.0.3"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "@astro-starlight-template/docs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astro-starlight-template/ui-components": "*",
+    "@astrojs/starlight": "^0.41.1",
+    "astro": "^7.0.3",
+    "sharp": "^0.34.5"
+  },
+  "nx": {
+    "projectType": "application",
+    "sourceRoot": "apps/docs/src",
+    "tags": [
+      "type:app",
+      "scope:docs"
+    ],
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npm run build",
+          "cwd": "{projectRoot}"
+        },
+        "outputs": [
+          "{projectRoot}/dist"
+        ],
+        "cache": true,
+        "inputs": [
+          "default",
+          {
+            "externalDependencies": [
+              "astro",
+              "@astrojs/starlight"
+            ]
+          }
+        ]
+      },
+      "dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npm run dev",
+          "cwd": "{projectRoot}"
+        }
+      },
+      "preview": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npm run preview",
+          "cwd": "{projectRoot}"
+        },
+        "dependsOn": [
+          "build"
+        ]
+      },
+      "typecheck": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx astro check",
+          "cwd": "{projectRoot}"
+        },
+        "cache": true,
+        "inputs": [
+          "default"
+        ]
+      }
+    }
+  }
+}

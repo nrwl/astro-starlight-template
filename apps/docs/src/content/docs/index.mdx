@@ -1,0 +1,40 @@
+---
+title: Nx Astro Starlight Starter
+description: A documentation site starter powered by Astro Starlight, featuring the ui-components utility library.
+template: splash
+hero:
+  tagline: Beautiful docs for your component library - with a typed utility kit ready to import.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Get Started
+      link: /guides/getting-started/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/nrwl/astro-starlight-template
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## What you get
+
+<CardGrid stagger>
+  <Card title="Utility helpers" icon="puzzle">
+    `@astro-starlight-template/ui-components` ships ready-to-import helpers:
+    `slugify`, `formatDate`, `readingTime`, and `sortedSidebar`.
+  </Card>
+  <Card title="Astro Starlight" icon="open-book">
+    World-class documentation UX: full-text search, dark mode, i18n,
+    and accessible navigation out of the box.
+  </Card>
+  <Card title="Fully typed" icon="seti:typescript">
+    Helpers and types like `SidebarEntry` are written in TypeScript, so
+    your editor autocompletes and type-checks every call.
+  </Card>
+  <Card title="Nx Cloud ready" icon="cloud">
+    Connect your repo for remote caching and distributed task execution -
+    run `npx nx connect` to get started.
+  </Card>
+</CardGrid>
