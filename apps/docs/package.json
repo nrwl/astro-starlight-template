@@ -69,6 +69,9 @@
         "cache": true,
         "inputs": [
           "default"
+        ],
+        "dependsOn": [
+          "build"
         ]
       }
     }
